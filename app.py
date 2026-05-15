@@ -14,7 +14,7 @@ with st.sidebar:
     
     st.divider()
     
-    # NEW: Feedback Button in the sidebar
+    #Feedback Button in the sidebar
     st.header("Feedback")
     st.write("Done negotiating? Get your score.")
     get_feedback = st.button("🏁 End Negotiation & Get Feedback", type="primary")
@@ -51,7 +51,7 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# --- NEW: THE FEEDBACK ENGINE ---
+# --- THE FEEDBACK ENGINE ---
 if get_feedback:
     if not api_key:
         st.sidebar.error("⚠️ API Key required.")
@@ -91,7 +91,7 @@ if get_feedback:
                 messages=eval_messages
             )
             
-            # Display the feedback beautifully in the main UI
+            # Display feedback in the main UI
             st.divider()
             st.success("Analysis Complete!")
             st.markdown(response.content[0].text)
