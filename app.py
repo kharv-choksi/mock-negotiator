@@ -9,7 +9,7 @@ st.markdown("Practice your PM salary negotiations and stakeholder pushback.")
 # --- SIDEBAR & AUTH ---
 with st.sidebar:
     st.header("Settings")
-    api_key = st.text_input("Enter Anthropic API Key:", type="password")
+    api_key = st.text_input("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", type="password")
     st.markdown("[Get an API key here](https://console.anthropic.com/)")
 
 # --- MVP SCOPE: THE SCENARIO & PERSONA ---
